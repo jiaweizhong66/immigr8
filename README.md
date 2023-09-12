@@ -34,6 +34,9 @@ User will be directed to review page, where it is populated with Canada already
 User could make further changes in Review page and update the local storage
 ![Screenshot 2023-09-12 at 5 10 35 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/1ded6304-a6b3-4f6b-be45-b40968b67061)
 
+If no records in local storage, review page will show a loading page
+![Screenshot 2023-09-12 at 5 35 07 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/a2baa010-8a7e-4d8f-aed9-24036925e681)
+
 
 Need more time to implement backend and set up database. I am not too familiar with Java Springboot, so I would probabily using Express.js
 I am comfortable with both Sql and NoSql, but I would prefer MongoDB for this project as it is easier to implement
