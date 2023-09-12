@@ -8,8 +8,7 @@ User can complete the form, when done click submit button will take them to Revi
 
 Form uses Yup Validation for the schema, however, the schema is not quite finished due to the lack of time to finish the project
 
+Start the app by running 
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+npm start
 ```
