@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, MenuItem, Button } from '@mui/material';
+import { TextField, MenuItem, Button, Typography } from '@mui/material';
 import './formStyle.css';
 
 
@@ -33,18 +33,35 @@ function ReviewPage() {
       };
 
     return formData ? (
-
+      <div className="form-container">
         <form onSubmit={handleSubmit}>
-          <div>
-            <label>Country of Birthhh</label>
-            <input 
-              type="text" 
-              value={formData.countryOfBirth || ''} 
-              onChange={(e) => handleChange(e, 'countryOfBirth')} 
-            />
-          </div>
-          <button type="submit">Save Edit</button>
-        </form>
+        <Typography variant="h4" component="div" gutterBottom style={{ textAlign: 'center', marginBottom: '20px' }}>
+          Please review your form
+        </Typography>
+        <TextField
+          select
+          label="Country of Birth"
+          value={formData.countryOfBirth || ''}
+          onChange={(e) => handleChange(e, 'countryOfBirth')}
+          variant="outlined"
+          fullWidth
+          name="countryOfBirth"
+        >
+          {countries.map((country) => (
+            <MenuItem key={country} value={country}>
+              {country}
+            </MenuItem>
+          ))}
+        </TextField>
+        <div className='button-container'>
+          <Button variant="contained" color="primary" type="submit">
+            Save Changes
+          </Button>
+        </div>
+      </form>
+        
+      </div>
+        
     ) : (
         <div>Loading...</div>
     );

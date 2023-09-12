@@ -65,9 +65,11 @@ function IntakeForm() {
               </MenuItem>
             ))}
           </TextField>
-        <Button variant="contained" color="primary" type="submit">
-          Submit
-        </Button>
+          <div className='button-container'>
+          <Button variant="contained" color="primary" type="submit">
+            Submit Form
+          </Button>
+        </div>
       </form>
       </div>
     )
