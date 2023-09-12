@@ -7,12 +7,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/review">
-          <ReviewPage />
-        </Route>
-        <Route path="/">
-          <IntakeForm />
-        </Route>
+        <Route exact path="/review" component={ReviewPage} />
+        <Route exact path="/" component={IntakeForm} />
       </Switch>
     </Router>
   );

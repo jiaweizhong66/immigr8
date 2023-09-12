@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import formSchema from './formSchema'
+import { TextField, MenuItem, Button } from '@mui/material';
+import './formStyle.css'
 
 function IntakeForm() {
     const [countryOfBirth, setCountryOfBirth] = useState('')
     const history = useHistory();
     const [errors, setErrors] = useState({})
+
+    const countries = [
+      'United States',
+      'Canada',
+      'Mexico',
+      'China',
+    ];
 
     const handleInputChange = (setter, field) => (e) => {
         console.log(e.target)
@@ -35,20 +44,32 @@ function IntakeForm() {
             }), {}));
           }
     }
-    
+
     return (
+      <div className='form-container'>
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Country of Birth</label>
-                <input
-                    type="text"
-                    value={countryOfBirth}
-                    onChange={handleInputChange(setCountryOfBirth, 'countryOfBirth')} 
-                />
-            </div>
-            {errors.countryOfBirth && <div style={{ color: 'red' }}>{errors.countryOfBirth}</div>}
-            <button type="submit">Submit</button>
-        </form>
+          <TextField
+            select
+            label="Country of Birth"
+            value={countryOfBirth}
+            onChange={handleInputChange(setCountryOfBirth, 'countryOfBirth')} 
+            variant="outlined"
+            fullWidth
+            name="countryOfBirth"
+            helperText={errors.countryOfBirth}
+            error={!!errors.countryOfBirth}
+          >
+            {countries.map((country) => (
+              <MenuItem key={country} value={country}>
+                {country}
+              </MenuItem>
+            ))}
+          </TextField>
+        <Button variant="contained" color="primary" type="submit">
+          Submit
+        </Button>
+      </form>
+      </div>
     )
 }
 
