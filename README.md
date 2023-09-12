@@ -17,7 +17,8 @@ npm start
 
 
 The form is displayed on localhost:3000 (only country of birth field is included right now)
-![Screenshot 2023-09-12 at 5 10 06 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/b2b37173-a6fd-49fc-a365-3dc605b6b0ea)
+![Screenshot 2023-09-12 at 5 10 06 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/45ec4e82-b02f-4a48-b829-3648d222588c)
+
 
 Countries can be selected from the dropdown(material UI)
 ![Screenshot 2023-09-12 at 5 26 18 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/e01f9550-9d72-45e0-bced-c13048b64f5e)
