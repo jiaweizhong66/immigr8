@@ -10,7 +10,7 @@ function App() {
         <Route path="/review">
           <ReviewPage />
         </Route>
-        <Route path="/edit">
+        <Route path="/">
           <IntakeForm />
         </Route>
       </Switch>
