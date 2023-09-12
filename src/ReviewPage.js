@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, MenuItem, Button, Typography } from '@mui/material';
+import { TextField, MenuItem, Button, Typography, CircularProgress } from '@mui/material';
 import './formStyle.css';
+
 
 
 function ReviewPage() {
@@ -35,7 +36,7 @@ function ReviewPage() {
     return formData ? (
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-        <Typography variant="h4" component="div" gutterBottom style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <Typography variant="h4" component="div" gutterBottom style={{ textAlign: 'center', marginBottom: '20px', fontFamily: 'Ubuntu Mono' }}>
           Please review your form
         </Typography>
         <TextField
@@ -46,6 +47,7 @@ function ReviewPage() {
           variant="outlined"
           fullWidth
           name="countryOfBirth"
+          fontFamil='Ubuntu Mono'
         >
           {countries.map((country) => (
             <MenuItem key={country} value={country}>
@@ -54,7 +56,7 @@ function ReviewPage() {
           ))}
         </TextField>
         <div className='button-container'>
-          <Button variant="contained" color="primary" type="submit">
+          <Button variant="contained" color="primary" type="submit" fontFamil='Ubuntu Mono'>
             Save Changes
           </Button>
         </div>
@@ -63,7 +65,10 @@ function ReviewPage() {
       </div>
         
     ) : (
-        <div>Loading...</div>
+      <div className="loading-container">
+        <CircularProgress />
+        <Typography variant="h6" style={{ marginTop: '20px' }}>Loading your files...</Typography>
+      </div>
     );
 
 }
