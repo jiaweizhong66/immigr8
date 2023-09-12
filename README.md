@@ -19,6 +19,9 @@ npm start
 The form is displayed on localhost:3000 (only country of birth field is included right now)
 ![Screenshot 2023-09-12 at 5 10 06 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/b2b37173-a6fd-49fc-a365-3dc605b6b0ea)
 
+Countries can be selected from the dropdown(material UI)
+![Screenshot 2023-09-12 at 5 26 18 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/e01f9550-9d72-45e0-bced-c13048b64f5e)
+
 Submitting form will save data in local storage, Canada is selected for this demo
 ![Screenshot 2023-09-12 at 5 10 19 AM](https://github.com/jiaweizhong66/immigr8/assets/66694451/15b551ae-f301-4d55-8af1-8fd6920fca45)
 
